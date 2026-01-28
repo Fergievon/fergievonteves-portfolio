@@ -231,7 +231,7 @@ function App() {
 
         {/* projects Section */}
         <section id="projects" className="section projects">
-          <div className='pixel-bg'>
+          {/* <div className='pixel-bg'>
               <PixelBlast
                 variant="circle"
                 pixelSize={4}
@@ -250,7 +250,7 @@ function App() {
                 speed={0.5}
                 edgeFade={0.13}
                 transparent/>
-            </div>
+            </div> */}
 
           <div className="projects-content">
             <div className='projects-content-h1'><h1 className='gradient'><BlurText text="My Projects" animateBy="words" direction="top"/></h1></div>
