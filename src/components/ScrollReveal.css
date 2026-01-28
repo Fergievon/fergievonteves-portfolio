@@ -1,0 +1,19 @@
+.scroll-reveal-text {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 12px; 
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.scroll-reveal {
+  overflow: visible !important; /* Allow words to be seen above their container */
+  padding-top: 40px;           /* Extra room for the 30px 'fall' */
+  margin-top: -40px;           /* Offset the padding so layout stays same */
+}
+
+.word {
+  display: inline-block;
+  white-space: pre;
+  will-change: transform, opacity, filter;
+} 

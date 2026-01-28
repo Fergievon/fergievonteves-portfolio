@@ -1,0 +1,19 @@
+.circular-gallery {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: grab;
+  /* Add these to ensure the container is a proper anchor */
+  position: relative;
+  display: block;
+}
+
+.circular-gallery canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.circular-gallery:active {
+  cursor: grabbing;
+}
