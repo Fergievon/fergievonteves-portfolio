@@ -132,7 +132,7 @@ display: none;
 }
 
 .carousel-indicator.inactive {
-  background-color: #ffffff;
+  background-color: #555;
 }
 .carousel-img {
   width: 100%;
