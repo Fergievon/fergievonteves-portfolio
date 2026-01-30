@@ -10,7 +10,7 @@ import LogoLoop from './components/LogoLoop';
 import MagicBento from './components/MagicBento';
 import CircularGallery from './components/CircularGallery';
 import DarkVeil from './components/DarkVeil';
-import Aurora from './components/Aurora';
+import CardSwap, {Card} from './components/CardSwap';
 
 import { Link } from 'lucide-react';
 import { GraduationCap } from 'lucide-react';
@@ -20,8 +20,10 @@ import { MonitorSmartphone } from 'lucide-react';
 import { Binary } from 'lucide-react';
 import {SquarePen} from 'lucide-react';
 import {Mail} from 'lucide-react';
+import { SquareArrowOutUpRight } from 'lucide-react';
 
-
+import Project1 from './assets/project_photos/Project3.png';
+import Project2 from './assets/project_photos/Project4.png';
 
 import '@fontsource/montserrat/300.css';
 import '@fontsource/montserrat/400.css'; 
@@ -103,27 +105,71 @@ function App() {
         {/* Hero Section */}
         <section id="home" className="section hero">
           <div className="hero-content">
+            <div className='hero-content-left'> 
             <div className='hero-content-Hello'><a><BlurText text="Hello, I'm" animateBy="words" direction="top" /></a></div>
-            <div className='hero-content-Name'><h1 className='gradient'><BlurText text="Fergievon Teves" animateBy="words" direction="top" /></h1></div>
+            <div><h1 className='hero-content-Name gradient'><BlurText text="Fergievon Teves" animateBy="words" direction="top" /></h1></div>
             <div className='hero-content-Desc'><BlurText text="Welcome to my digital space! I'm a 3rd-year Computer Engineering student! This portfolio is a collection of my academic journey, late-night coding sessions, and everything I'm learning along the way—I hope you'll have a blast! :D" delay={100} animateBy="words" direction="top"/></div>
-            
-            <a className='hero-content-button' href={Resume} target="_blank" rel="noopener noreferrer"> 
+              <div className='button-container'>
+              <a className='hero-content-button' href="#projects"> 
+                <StarBorder thickness={1.5} className='project-button'>
+                  <div className='button-content'>
+                    <SquareArrowOutUpRight size={16}/>
+                    <p>View My Projects</p>
+                  </div>
+                </StarBorder>
+              </a>
+              <a className='hero-content-button' href={Resume} target="_blank" rel="noopener noreferrer"> 
+                <StarBorder thickness={1.5} className='resume-button'>
+                  <div className='button-content'>
+                    <Link size={16}/>
+                    <p>Resume</p>
+                  </div>
+                </StarBorder>
+              </a>
+              </div>
+            </div>
 
-              <StarBorder thickness={1.5} className='resume-button'>
-                <div className='button-content'>
-                  <Link size={16}/>
-                  Resume
-                </div>
-              </StarBorder>
-            </a>
+            <div className='hero-content-right'>
+              <div style={{ height: '600px', width: '100%', position: 'relative', display: 'flex', justifyContent: 'center' }}>
+                <CardSwap
+                  cardDistance={30}
+                  verticalDistance={70}
+                  delay={2000}
+                  pauseOnHover={true}>
+                  <Card>
+                    <h3>Card 1</h3>
+                    <div> <img src={Project1} alt='Project1'/></div>
+                    <p>Your content here</p>
+                  </Card>
+                  <Card>
+                    <h3>Card 2</h3>
+                    <div> <img src={Project2} alt='Project2'/></div>
+                    <p>Your content here</p>
+                  </Card>
+                  <Card>
+                    <h3>Card 3</h3>
+                    <p>Your content here</p>
+                  </Card>
+                  <Card>
+                    <h3>Card 3</h3>
+                    <p>Your content here</p>
+                  </Card>
+                  <Card>
+                    <h3>Card 3</h3>
+                    <p>Your content here</p>
+                  </Card>
+                </CardSwap>
+              </div>
+            </div>
           </div>
         </section>
+
         {/* About Section */}
         <section id="about" className="section about">
           <div className='about-content'> 
             <div className='about-content-about'><h1 className='gradient'><BlurText text="About Me" animateBy="words" direction="top"/></h1></div>
             <hr/>
-            <div className='about-content-Desc'><BlurText text="I am Fergievon Alaika B. Teves, a third-year Bachelor of Science in Computer Engineering student at Ateneo de Davao University. I have a strong passion for computers, art, and creativity — especially anything pink. In my free time, I take on graphic design commissions to earn extra allowance and build my creative portfolio. I also enjoy volunteering, whether it's supporting animal shelters or participating in technology-related seminars and events, such as the recently concluded Mini UI/UX PH Davao." delay={50} animateBy="words" direction="top"/>
+            <div><h2 className='about-content-Desc'><BlurText text="I am Fergievon Alaika B. Teves, a third-year Bachelor of Science in Computer Engineering student at Ateneo de Davao University. I have a strong passion for computers, art, and creativity — especially anything pink. In my free time, I take on graphic design commissions to earn extra allowance and build my creative portfolio. I also enjoy volunteering, whether it's supporting animal shelters or participating in technology-related seminars and events, such as the recently concluded Mini UI/UX PH Davao." delay={50} animateBy="words" direction="top"/></h2>
             </div>
             <div className='about-content-Desc'><BlurText text="On the technical side, my academic background includes courses such as Object-Oriented Programming, Data Structures and Algorithms, Software Design, Numerical Methods, Hardware Description Language, Logic Circuits and Design, and a Computer Engineering elective in Machine Learning. Currently, I am working on two personal projects that I aim to complete by April 2026. These projects reflect my growing interest in applying both software and hardware concepts through hands-on development, which also inspired me to create this portfolio." delay={50} animateBy="words" direction="top"/>
             </div>
@@ -151,7 +197,7 @@ function App() {
         </section>
 
         {/* skills Section */}
-        <section id="skills" className="section skills">
+        <section id="skills" className="section skills stacking-section">
           <div className='skills-content'>
             <div className='skills-content-h1'><h1 className='gradient'><BlurText text="My Skills" animateBy="words" direction="top"/></h1></div>
             <div className='skills-content-Desc'><BlurText text="These are the programming, design, and interpersonal skills I have developed through a combination of formal education and self-directed learning, applying them in academic projects, hands-on activities, and continuous practice." delay={80} animateBy="words" direction="top"/></div>
@@ -230,27 +276,8 @@ function App() {
         </section>
 
         {/* projects Section */}
-        <section id="projects" className="section projects">
-          {/* <div className='pixel-bg'>
-              <PixelBlast
-                variant="circle"
-                pixelSize={4}
-                color="#ea1084"
-                patternScale={2}
-                patternDensity={1.5}
-                pixelSizeJitter={0}
-                enableRipples={false}
-                rippleSpeed={1}
-                rippleThickness={0.12}
-                rippleIntensityScale={1.5}
-                liquid
-                liquidStrength={0.5}
-                liquidRadius={1.2}
-                liquidWobbleSpeed={5}
-                speed={0.5}
-                edgeFade={0.13}
-                transparent/>
-            </div> */}
+        <section id="projects" className="section projects stacking-section">
+
 
           <div className="projects-content">
             <div className='projects-content-h1'><h1 className='gradient'><BlurText text="My Projects" animateBy="words" direction="top"/></h1></div>
@@ -273,7 +300,7 @@ function App() {
         </section>
 
         {/* affiliations Section */}
-        <section id="affiliations" className="section affiliations">
+        <section id="affiliations" className="section affiliations stacking-section">
           <div className="liquid-bg-1">
              <DarkVeil
             hueShift={0}

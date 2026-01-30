@@ -49,6 +49,7 @@
 
 .magic-bento-card__text {
   flex: 1;
+  color: #0D0D0D;
 }
 
 .magic-bento-card__title {
@@ -99,6 +100,7 @@
 .magic-bento-card--compact .magic-bento-card__description {
   font-size: 11px; /* Scaled down from 12px */
   opacity: 0.6;
+  color: #0D0D0D;
 }
 
 .magic-bento-card--compact {
@@ -391,7 +393,6 @@
 .tech-logo:hover {
   transform: translateY(-5px);
   border-color: #FDFDFD;
-  
 }
 
 

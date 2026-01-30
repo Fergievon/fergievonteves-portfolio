@@ -32,42 +32,41 @@ body{
 }
 
 .GlobalHeader {
-    position: fixed; 
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    top: 0;
+  position: fixed; 
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  top: 0;
 
-    background-color: #FDFDFD; 
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
-    margin-bottom: 0;
-    padding: 5px 0;
+  background-color: #FDFDFD; 
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+  margin-bottom: 0;
+  padding: 5px 0;
 }
 
 .GlobalNav {
-    max-width: 1090px;
-    margin: 0 auto;
-    padding-left: clamp(8px, 4vw, 40px);
-    padding-right: clamp(16px, 5vw, 60px);
-    height: 35px;
-    column-gap: 0px;
+  max-width: 1090px;
+  margin: 0 auto;
+  padding-left: clamp(8px, 4vw, 40px);
+  padding-right: clamp(16px, 5vw, 60px);
+  height: 35px;
+  column-gap: 0px;
 
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
 }
 
 .navleft{
-    display: flex;
-    align-items: center;
-    
+  display: flex;
+  align-items: center;
 }
 .navleft h1{
-    color: #ea1084;
-    font-size: 18px;
-    font-weight: 900;
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
+  color: #ea1084;
+  font-size: 18px;
+  font-weight: 900;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .navlinks {
@@ -113,14 +112,34 @@ body{
 }
 
 .section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  position: sticky;
-  top: 0;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.about-content, .skills-content {
+  position: relative; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 0;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.stacking-section {
+  position: sticky !important;
+  top: 0;
+}
+
+#skills { z-index: 10; }
+#projects { z-index: 20; }
+#affiliations { z-index: 30; }
+
 /* Hero Section */
 .liquid-bg{
   position: fixed;
@@ -133,35 +152,58 @@ body{
   z-index: 0;
 }
 .hero{
-  position: relative;
-  z-index: 1;
-  background: transparent;
+  min-height: 100vh; /* Ensures it's at least as tall as the screen */
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #0D0D0D;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
   display: flex;
-  z-index: 2;
-  font-family: 'Montserrat', sans-serif;
-  width: 700px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 -50px; 
+  margin: 0px auto;
+
+  gap: 50px;
+}
+
+.hero-content-left{
+  position: relative; 
+  flex-direction: column;
+  
+  flex: 1;
+  min-width: 450px; 
+  z-index: 5;
+
+  justify-content: left !important;
+  align-items: flex-start !important;
+  text-align: left !important;
+}
+.hero-content-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  min-width: 500px;
+  height: 600px;
 }
 
 .hero-content-Hello {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   width: 100%;
   margin-bottom: -20px;
 }
 .hero-content-Hello a {
   display: inline-block;
-  text-align: center;
   font-size: 50px;
   font-weight: 500;
   color: #0D0D0D;
@@ -177,12 +219,25 @@ body{
   }
 
 .hero-content-Name {
-  display: flex;
-  justify-content: center;
+  display: flex !important;
+  justify-content: flex-start !important; 
+  align-items: flex-start !important;
   width: 100%;
-  margin-bottom: 10px;
+  font-size: 70px;
+  font-weight: 700;
 }
 
+.hero-content-Name h1 {
+  display: block !important;
+  text-align: left !important;
+  width: 100%;
+  margin: 0;
+}
+
+.hero-content-Name h1 * {
+  text-align: left !important;
+  display: inline-block; 
+}
 .gradient, .gradient span {
   background: radial-gradient(
     circle at 30% 30%,
@@ -204,40 +259,86 @@ body{
   100% { background-position: 0% 0%; }
 }
 
-.hero-content-Name h1 {
-  display: inline-block;
-  text-align: center;
-  font-size: 70px;
-  margin: 0;
-  font-weight: 700;
-}
 .hero-content-Desc {
-  display: flex;
-  justify-content: center;
+  display: flex !important;
+  justify-content: flex-start !important; 
+  align-items: flex-start !important;
+  text-align: left !important;
   width: 100%;
   margin-bottom: 60px;
 }
-.hero-content-Desc p {
-  font-weight: 300 !important;
-  font-size: 14px !important;
-  color: #0D0D0D;
+.hero-content-Desc > * {
+  text-align: left !important;
+  width: 100%;
 }
+.hero-content-Desc p,
+.hero-content-Desc span,
+.hero-content-Desc div {
+  text-align: left !important;
+  justify-content: flex-start !important;
+  display: inline-block;
+  margin-left: 0 !important;
+}
+
+.hero-content-button{
+  text-decoration: none;
+}
+.button-container {
+  display: flex;         
+  flex-direction: row;   
+  gap: 20px;           
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
 .button-content{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   gap: 8px;
-  color: #0D0D0D;
 }
 .button-content svg{
   color: #ea1084;
 }
+.project-button svg{
+  color: #FDFDFD;
+}
 .resume-button{
-    animation: fadeIn 4s forwards;
+  animation: fadeIn 4s forwards;
+  color: #0D0D0D;
 }
 .resume-button:hover{
   cursor: pointer;
   border: 0.7px solid #ea1084;
+}
+.project-button{
+  animation: fadeIn 4s forwards;
+  background-color: #ea1084;
+  color: #ea1084;
+}
+.project-button:hover{
+  cursor: pointer;
+  border: 0.7px solid #ea1084;
+  background-color: transparent;
+  color: #0D0D0D;
+}
+.project-button p {
+  color: #fafafa;
+  font-weight: 500;
+  font-size: 16px;
+}
+.project-button:hover p{
+  color:#0D0D0D !important;
+}
+.project-button:hover svg{
+  color: #ea1084;
+}
+.resume-button p{
+  color: #0D0D0D;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .about{
@@ -296,7 +397,7 @@ body{
   text-align: center;
   width: 150%;   
   margin: 0 auto;       
-  font-size: 12px;  
+  font-size: 14px;  
   color: #0D0D0D;      
 }
 
@@ -424,7 +525,7 @@ body{
   text-align: center;      
   width: 800px;             
   margin: 0 auto 50px auto; 
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.6;       
   color: #0D0D0D;
 }
@@ -520,20 +621,22 @@ body{
 .skills-content-IS{
   flex-direction: row;
   display: flex;
-  gap: 50px;
+  gap: 20px;
   text-align: left !important;
   margin-top: 10px;
-  width: 800px;
+  width: 850px;
+  max-width: 100%;
 }
 .IS-content{
   display: flex;
   flex-direction: column;
+  flex: 1;
   justify-content: left !important;
   align-items: flex-start !important;
   text-align: left !important;
 }
 .IS-content h2{
-  font-size: 12px ;
+  font-size: 13px ;
   margin-top: 5px;
   line-height: 1.4;
 }
@@ -543,8 +646,6 @@ body{
   line-height: 1.4;
   color: #0D0D0D;
 }
-
-
 .pixel-bg{
   position: absolute;
   inset: 0;
@@ -590,7 +691,7 @@ body{
 .projects-content-Desc {
   display: flex;
   color: #0D0D0D;
-  font-size: 12px;
+  font-size: 14px;
   justify-content: center;
     width: 800px; 
   margin-bottom: 30px;
@@ -635,7 +736,7 @@ body{
 .affiliations-content-Desc {
   display: flex;
   color: #0D0D0D;
-  font-size: 12px;
+  font-size: 14px;
   justify-content: center;
     width: 800px; 
   margin-bottom: -40px;
@@ -650,14 +751,14 @@ body{
 .cute-footer {
   padding: 10px 20px 30px;
   background: #fafafa;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
   color: #0D0D0D;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
   position: relative;
-  z-index: 20; 
+  z-index: 50; 
 }
 
 .footer-line {
@@ -760,8 +861,11 @@ body{
     margin-left: 0px;
   }
 
-  .hero-content-Name h1 {
-    font-size: 53px; 
+  .hero-content-Name {
+    font-size: 50px; 
+    align-items: flex-start !important;
+    justify-content: left !important;
+    text-align: left !important;
   }
 
   .hero-content-Hello a {
@@ -771,9 +875,12 @@ body{
 }
 
 @media (max-width: 903px) {
-  .hero-content-Name h1 {
+  .hero-content-Name {
     font-size: 45px !important;
     line-height: 1.1;
+    align-items: flex-start !important;
+    justify-content: left !important;
+    text-align: left !important;
   }
     .navlinks {
     transform: translateX(0) !important; 
