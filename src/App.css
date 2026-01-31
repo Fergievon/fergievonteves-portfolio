@@ -222,9 +222,12 @@ body{
   display: flex !important;
   justify-content: flex-start !important; 
   align-items: flex-start !important;
+  text-align: left !important;
   width: 100%;
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 700;
+  line-height: 70px;
+  margin-bottom: 20px;
 }
 
 .hero-content-Name h1 {
@@ -278,6 +281,39 @@ body{
   justify-content: flex-start !important;
   display: inline-block;
   margin-left: 0 !important;
+}
+.hero-content-right img{
+  padding: 10px 10px 10px 10px;
+  height: 500px;
+  align-items: center;
+  margin: 0 auto;
+
+}
+.Card{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+.card-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 16px;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.815); 
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.055);
+}
+.card-header svg{
+  color: #ea1084;
+}
+.card-header h3{
+  color: #ea1084 ;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .hero-content-button{
@@ -1030,17 +1066,15 @@ width: 90vw !important; /* Use viewport width so it fills the phone screen */
 }
 
 @media (max-width: 480px) {
-  /* 1. Header Reset */
   .GlobalNav { display: flex !important; justify-content: center !important; width: 100%; }
   .navleft { margin: 0 auto !important; transform: none !important; }
   .navleft h1 { font-size: 16px; }
   .navlinks { display: none !important; }
 
-  /* 2. THE NUCLEAR FIX FOR THE HERO DILEMMA */
   .section:first-of-type {
     height: 100vh !important;
     min-height: 100vh !important;
-    position: relative !important; /* Disables sticky which causes the 'cut' */
+    position: relative !important; 
     top: 0 !important;
     padding: 0 !important;
     display: flex !important;
@@ -1049,12 +1083,13 @@ width: 90vw !important; /* Use viewport width so it fills the phone screen */
   }
 
   .hero {
-    flex: 1; /* Takes up all available space in the parent */
+    flex: 1; 
     height: 100% !important;
     width: 100% !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+    text-align: center !important;
     position: relative !important;
   }
 
@@ -1078,12 +1113,13 @@ width: 90vw !important; /* Use viewport width so it fills the phone screen */
   .hero-content-Name h1 {
     font-size: 34px !important;
     line-height: 1.1 !important;
-    margin-bottom: 15px !important;
+    margin-bottom: 20px !important;
     margin-top: 5px;
   }
 
   .hero-content-Desc {
     margin-bottom: 30px !important;
+    margin-top: 10px;
   }
 
   .hero-content-Desc p {
@@ -1128,5 +1164,8 @@ width: 90vw !important; /* Use viewport width so it fills the phone screen */
 }
 .affiliations-content-h1{
   margin-top: 40px;
+  text-align: center !important;
+  justify-content: center !important;
+  
 }
 }

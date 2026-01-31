@@ -106,8 +106,8 @@ function App() {
         <section id="home" className="section hero">
           <div className="hero-content">
             <div className='hero-content-left'> 
-            <div className='hero-content-Hello'><a><BlurText text="Hello, I'm" animateBy="words" direction="top" /></a></div>
-            <div><h1 className='hero-content-Name gradient'><BlurText text="Fergievon Teves" animateBy="words" direction="top" /></h1></div>
+            <div className='hero-content-Hello'><a><BlurText text="Hello, I'm a" animateBy="words" direction="top" /></a></div>
+            <div><h1 className='hero-content-Name gradient'><BlurText text="Computer Engineering Student & Software Enthusiast" animateBy="words" direction="top" /></h1></div>
             <div className='hero-content-Desc'><BlurText text="Welcome to my digital space! I'm a 3rd-year Computer Engineering student! This portfolio is a collection of my academic journey, late-night coding sessions, and everything I'm learning along the way—I hope you'll have a blast! :D" delay={100} animateBy="words" direction="top"/></div>
               <div className='button-container'>
               <a className='hero-content-button' href="#projects"> 
@@ -137,26 +137,39 @@ function App() {
                   delay={2000}
                   pauseOnHover={true}>
                   <Card>
-                    <h3>Card 1</h3>
+                    <div className='card-header'>
+                      <div className='header-icon'><Medal/></div>
+                      <h3>Attendance Monitoring System with RFID</h3>
+                    </div>
                     <div> <img src={Project1} alt='Project1'/></div>
-                    <p>Your content here</p>
                   </Card>
                   <Card>
-                    <h3>Card 2</h3>
+                    <div className='card-header'>
+                      <div className='header-icon'><Medal/></div>
+                      <h3>Augmented Reality Learning Mobile Application</h3>
+                    </div>
                     <div> <img src={Project2} alt='Project2'/></div>
-                    <p>Your content here</p>
                   </Card>
                   <Card>
-                    <h3>Card 3</h3>
-                    <p>Your content here</p>
+                    <div className='card-header'>
+                      <div className='header-icon'><Medal/></div>
+                      <h3>Flight Charter System</h3>
+                    </div>
+                    <div> <img src={Project1} alt='Project1'/></div>
                   </Card>
                   <Card>
-                    <h3>Card 3</h3>
-                    <p>Your content here</p>
+                    <div className='card-header'>
+                      <div className='header-icon'><Medal/></div>
+                      <h3>Polynomial Equations Calculator</h3>
+                    </div>
+                    <div> <img src={Project1} alt='Project1'/></div>
                   </Card>
                   <Card>
-                    <h3>Card 3</h3>
-                    <p>Your content here</p>
+                    <div className='card-header'>
+                      <div className='header-icon'><Medal/></div>
+                      <h3>PWD-Friendly Establishments Guide Application</h3>
+                    </div>
+                    <div> <img src={Project1} alt='Project1'/></div>
                   </Card>
                 </CardSwap>
               </div>
