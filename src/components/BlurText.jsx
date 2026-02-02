@@ -80,11 +80,16 @@ const BlurText = ({
           delay: (index * delay) / 1000
         };
         spanTransition.ease = easing;
+        const highlights = ["Fergievon", "Teves", "Alaika","B", "front-end", "development", "UI/UX", "design", "graphic"];
+        const cleanWord = segment.replace(/[.,\#!$%\^&\*;:{}=\_`~()]/g, "");
+        const isHighlighted = highlights.includes(cleanWord);
 
         return (
           <motion.span
-            className="inline-block will-change-[transform,filter,opacity]"
             key={index}
+            className={`inline-block will-change-[transform,filter,opacity] ${
+              isHighlighted ? 'text-[#ea1084] font-bold text-[1.1em] transition-all' : ''
+            }`}
             initial={fromSnapshot}
             animate={inView ? animateKeyframes : fromSnapshot}
             transition={spanTransition}

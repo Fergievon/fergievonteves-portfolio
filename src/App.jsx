@@ -24,6 +24,9 @@ import { SquareArrowOutUpRight } from 'lucide-react';
 
 import Project1 from './assets/project_photos/Project3.png';
 import Project2 from './assets/project_photos/Project4.png';
+import Project3 from './assets/project_photos/Project3F.png';
+import Project4 from './assets/project_photos/Project4F.png';
+import Project5 from './assets/project_photos/Project5F.png';
 
 import '@fontsource/montserrat/300.css';
 import '@fontsource/montserrat/400.css'; 
@@ -108,7 +111,7 @@ function App() {
             <div className='hero-content-left'> 
             <div className='hero-content-Hello'><a><BlurText text="Hello, I'm a" animateBy="words" direction="top" /></a></div>
             <div><h1 className='hero-content-Name gradient'><BlurText text="Computer Engineering Student & Software Enthusiast" animateBy="words" direction="top" /></h1></div>
-            <div className='hero-content-Desc'><BlurText text="Welcome to my digital space! I'm a 3rd-year Computer Engineering student! This portfolio is a collection of my academic journey, late-night coding sessions, and everything I'm learning along the way—I hope you'll have a blast! :D" delay={100} animateBy="words" direction="top"/></div>
+            <div className='hero-content-Desc'><BlurText text="Hello i'm Fergievon Teves! Welcome to my digital space—a collection of my academic journey, late-night coding sessions, and everything I'm learning along the way. I currently enjoy dabbling in front-end development and UI/UX design, with a growing interest in graphic design. I hope you'll have a blast exploring! :D" delay={100} animateBy="words" direction="top"/></div>
               <div className='button-container'>
               <a className='hero-content-button' href="#projects"> 
                 <StarBorder thickness={1.5} className='project-button'>
@@ -155,21 +158,21 @@ function App() {
                       <div className='header-icon'><Medal/></div>
                       <h3>Flight Charter System</h3>
                     </div>
-                    <div> <img src={Project1} alt='Project1'/></div>
+                    <div> <img src={Project4} alt='Project1'/></div>
                   </Card>
                   <Card>
                     <div className='card-header'>
                       <div className='header-icon'><Medal/></div>
                       <h3>Polynomial Equations Calculator</h3>
                     </div>
-                    <div> <img src={Project1} alt='Project1'/></div>
+                    <div> <img src={Project5} alt='Project1'/></div>
                   </Card>
                   <Card>
                     <div className='card-header'>
                       <div className='header-icon'><Medal/></div>
                       <h3>PWD-Friendly Establishments Guide Application</h3>
                     </div>
-                    <div> <img src={Project1} alt='Project1'/></div>
+                    <div> <img src={Project3} alt='Project1'/></div>
                   </Card>
                 </CardSwap>
               </div>
@@ -184,7 +187,7 @@ function App() {
             <hr/>
             <div><h2 className='about-content-Desc'><BlurText text="I am Fergievon Alaika B. Teves, a third-year Bachelor of Science in Computer Engineering student at Ateneo de Davao University. I have a strong passion for computers, art, and creativity — especially anything pink. In my free time, I take on graphic design commissions to earn extra allowance and build my creative portfolio. I also enjoy volunteering, whether it's supporting animal shelters or participating in technology-related seminars and events, such as the recently concluded Mini UI/UX PH Davao." delay={50} animateBy="words" direction="top"/></h2>
             </div>
-            <div className='about-content-Desc'><BlurText text="On the technical side, my academic background includes courses such as Object-Oriented Programming, Data Structures and Algorithms, Software Design, Numerical Methods, Hardware Description Language, Logic Circuits and Design, and a Computer Engineering elective in Machine Learning. Currently, I am working on two personal projects that I aim to complete by April 2026. These projects reflect my growing interest in applying both software and hardware concepts through hands-on development, which also inspired me to create this portfolio." delay={50} animateBy="words" direction="top"/>
+            <div className='about-content-Desc'><BlurText text="On the technical side, my academic background includes courses such as Object-Oriented Programming, Data Structures and Algorithms, Software Design, Numerical Methods, Hardware Description Language, Logic Circuits and Design, and a Computer Engineering elective in Machine Learning. Currently, I am working on two personal projects that I aim to complete by April 2026. These projects reflect my growing interest in applying both software and hardware concepts through hands-on practice, which also inspired me to create this portfolio." delay={50} animateBy="words" direction="top"/>
             </div>
             <div className='about-content-rectangles'>
                 <GlareHover className='rectangle-item'>
@@ -213,7 +216,7 @@ function App() {
         <section id="skills" className="section skills stacking-section">
           <div className='skills-content'>
             <div className='skills-content-h1'><h1 className='gradient'><BlurText text="My Skills" animateBy="words" direction="top"/></h1></div>
-            <div className='skills-content-Desc'><BlurText text="These are the programming, design, and interpersonal skills I have developed through a combination of formal education and self-directed learning, applying them in academic projects, hands-on activities, and continuous practice." delay={80} animateBy="words" direction="top"/></div>
+            <div className='skills-content-Desc'><BlurText text="These are the programming, projects, and interpersonal skills I have developed through a combination of formal education and self-directed learning, applying them in academic projects, hands-on activities, and continuous practice." delay={80} animateBy="words" direction="top"/></div>
             <div className='skills-content-rectangles'>
               <GlareHover className='skills-rectangle-item'>
                 <div className='skills-rectangle-header'> 
