@@ -269,6 +269,7 @@ body{
   text-align: left !important;
   width: 100%;
   margin-bottom: 60px;
+  color: #0D0D0D;
 }
 .hero-content-Desc > * {
   text-align: left !important;
@@ -944,6 +945,7 @@ body{
     align-items: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    color: #0D0D0D;
   }
 
   /* 4. Center the buttons */

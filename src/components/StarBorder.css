@@ -32,8 +32,8 @@
 .inner-content {
   position: relative;
   border: 1px solid rgba(234, 16, 132, 0.2);
-  background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(20px);   
+
   -webkit-backdrop-filter: blur(20px); 
   color: white;
   font-size: 12px;
