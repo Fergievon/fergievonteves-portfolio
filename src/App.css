@@ -225,7 +225,7 @@ body{
   width: 100%;
   font-size: 60px;
   font-weight: 700;
-  line-height: 70px;
+  line-height: 80px;
   margin-bottom: 20px;
 }
 
@@ -1193,7 +1193,11 @@ width: 90vw !important; /* Use viewport width so it fills the phone screen */
   }
 
   .project-button p, .resume-button p {
-    font-size: 12px;
+    font-size: 10px;
+  }
+  .project-button{
+    padding: 0 0 0 0 !important;
+    width: 200px !important;
   }
   /* 4. OTHER SECTIONS (Restored) */
   .projects-content-Desc, 

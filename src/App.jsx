@@ -95,15 +95,7 @@ function App() {
       </header>
 
       <section className="sections">
-        <div className="liquid-bg">
-            <DarkVeil
-            hueShift={0}
-            noiseIntensity={0}
-            scanlineIntensity={0}
-            speed={1.5}
-            scanlineFrequency={0}
-            warpAmount={0} />
-        </div>
+        
 
         {/* Hero Section */}
         <section id="home" className="section hero">
@@ -317,15 +309,6 @@ function App() {
 
         {/* affiliations Section */}
         <section id="affiliations" className="section affiliations stacking-section">
-          <div className="liquid-bg-1">
-             <DarkVeil
-            hueShift={0}
-            noiseIntensity={0}
-            scanlineIntensity={0}
-            speed={1.5}
-            scanlineFrequency={0}
-            warpAmount={0} />
-          </div>
 
           <div className="affiliations-content">
             <div className='affiliations-content-h1'><h1 className='gradient'><BlurText text="Affiliations and Roles" animateBy="words" direction="top"/></h1></div>
